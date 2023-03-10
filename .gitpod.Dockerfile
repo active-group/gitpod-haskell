@@ -27,5 +27,5 @@ ENV PATH=/home/gitpod/.nix-profile/bin:$PATH
 RUN nix-env -i git git-lfs
 
 # Install direnv
-RUN nix-env -i direnv \
+RUN nix-env -i direnv ghc cabal-install haskell-language-server \
   && direnv hook bash >> /home/gitpod/.bashrc
